@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: bail-backend
+    runtime: python
+    buildCommand: ""
+    startCommand: uvicorn app:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: PORT
+        value: 10000
+    plan: free
